@@ -19425,9 +19425,9 @@ def cute(owo):
 
     for y in range(HEIGHT):
         for x in range(WIDTH):
-            byte_index = y * (WIDTH // 8) + x // 8
-            bit_index = 7 - (x % 8)
-            if (owo[byte_index] >> bit_index) & 1:
+            cat_index = y * (WIDTH // 8) + x // 8
+            rac_index = 7 - (x % 8)
+            if (owo[cat_index] >> rac_index) & 1:
                 uwu.set_at((x, y), (255, 255, 255))
 
     return pygame.transform.scale(
@@ -19438,8 +19438,8 @@ running = True
 kewt = 0
 
 while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+    for meow in pygame.event.get():
+        if meow.type == pygame.QUIT:
             running = False
 
     screen.blit(cute(frames[kewt]), (0, 0))
