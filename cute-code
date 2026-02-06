@@ -4,7 +4,7 @@ import time
 WIDTH = 128
 HEIGHT = 64
 SCALE = 4
-FRAME_DELAY = 0.07
+FRAME_DELAY = 0.09
 
 frames = [
     
@@ -19417,9 +19417,9 @@ frames = [
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH*SCALE, HEIGHT*SCALE))
-pygame.display.set_caption("Meow")
+pygame.display.set_caption("Bitmap Player")
 
-def meow(frame):
+def cute(owo):
     uwu = pygame.Surface((WIDTH, HEIGHT))
     uwu.fill((0, 0, 0))
 
@@ -19427,7 +19427,7 @@ def meow(frame):
         for x in range(WIDTH):
             byte_index = y * (WIDTH // 8) + x // 8
             bit_index = 7 - (x % 8)
-            if (frame[byte_index] >> bit_index) & 1:
+            if (owo[byte_index] >> bit_index) & 1:
                 uwu.set_at((x, y), (255, 255, 255))
 
     return pygame.transform.scale(
@@ -19435,17 +19435,17 @@ def meow(frame):
     )
 
 running = True
-owo = 0
+kewt = 0
 
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-    screen.blit(meow(frames[owo]), (0, 0))
+    screen.blit(cute(frames[kewt]), (0, 0))
     pygame.display.flip()
 
-    owo = (owo + 1) % len(frames)
+    kewt = (kewt + 1) % len(frames)
     time.sleep(FRAME_DELAY)
 
 pygame.quit()
