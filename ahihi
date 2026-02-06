@@ -19417,7 +19417,7 @@ frames = [
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH*SCALE, HEIGHT*SCALE))
-pygame.display.set_caption("Bitmap Player")
+pygame.display.set_caption("Ahihi")
 
 def cute(owo):
     uwu = pygame.Surface((WIDTH, HEIGHT))
